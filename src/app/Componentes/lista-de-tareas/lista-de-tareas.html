@@ -1,0 +1,21 @@
+<label for="nuevaTarea">Añade una nueva tarea.</label>
+<input #nuevaTarea type="text" id="nuevaTarea">
+<button (click)="agregarTarea(nuevaTarea.value)">Agregar tarea</button>
+<ul>
+  @for (tarea of listaTareas; track $index) {
+    <li>
+      @if (indiceParaEditar === $index) {
+        <input #textoEditado [value]="tarea" aria-label="Editar tarea">
+        <button class="guardar" (click)="guardarEdicion($index, textoEditado.value)">Guardar</button>
+      } @else {
+        <span class="texto-tarea">{{ tarea }}</span>
+        <div class="acciones">
+          <button class="editar" (click)="editarTarea($index)">Editar</button>
+          <button class="eliminar" (click)="eliminarTarea($index)">Eliminar</button>
+        </div>
+      }
+    </li>
+  } @empty {
+    <li class="lista-vacia">Aún no tienes tareas. ¡Añade la primera!</li>
+  }
+</ul>

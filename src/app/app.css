@@ -1,0 +1,11 @@
+main {
+  width: min(100% - 2rem, 42rem);
+  margin: 3rem auto;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: min(100% - 1.25rem, 42rem);
+    margin: 1.5rem auto;
+  }
+}
