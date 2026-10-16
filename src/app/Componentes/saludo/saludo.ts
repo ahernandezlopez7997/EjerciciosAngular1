@@ -7,5 +7,20 @@ import { Component, Input } from '@angular/core';
   templateUrl: './saludo.html',
 })
 export class Saludo {
-  @Input() nombre = '';
+  saludo: string = '';
+
+  constructor() {
+    this.generarSaludo();
+  }
+
+  generarSaludo() {
+    const hora: number = new Date().getHours();
+    if (hora < 12) {
+      this.saludo = 'Buenos días';
+    }else if (hora < 20){
+      this.saludo = 'Buenas tardes';
+    }else{
+      this.saludo = 'Buenas noches';
+    }
+  }
 }

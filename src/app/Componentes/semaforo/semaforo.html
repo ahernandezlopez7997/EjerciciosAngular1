@@ -1,0 +1,13 @@
+<section>
+  <h2>Semáforo</h2>
+
+  <div class="carcasa" role="img" [attr.aria-label]="'Luz ' + luzActiva() + ' encendida'">
+    <div class="luz roja" [class.encendida]="luzActiva() === 'roja'"></div>
+    <div class="luz ambar" [class.encendida]="luzActiva() === 'ambar'"></div>
+    <div class="luz verde" [class.encendida]="luzActiva() === 'verde'"></div>
+  </div>
+
+  <button type="button" (click)="alternar()">
+    {{ intervalo === null ? 'Reanudar' : 'Detener' }}
+  </button>
+</section>

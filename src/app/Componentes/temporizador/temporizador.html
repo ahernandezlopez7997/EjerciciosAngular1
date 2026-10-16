@@ -1,0 +1,29 @@
+<section>
+  <h2>Temporizador</h2>
+
+  <label for="duracion">Tiempo en segundos:</label>
+  <input
+    #duracion
+    id="duracion"
+    type="number"
+    min="1"
+    step="1"
+    [disabled]="intervalo !== null"
+  >
+
+  <button
+    (click)="iniciar(duracion.valueAsNumber)"
+    [disabled]="intervalo !== null"
+  >
+    Iniciar
+  </button>
+
+  <button
+    (click)="detener()"
+    [disabled]="intervalo === null"
+  >
+    Detener
+  </button>
+
+  <p aria-live="polite">Tiempo restante: {{ tiempoRestante() }} segundos</p>
+</section>

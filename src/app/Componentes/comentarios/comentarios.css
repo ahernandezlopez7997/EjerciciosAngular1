@@ -1,0 +1,89 @@
+:host {
+  display: block;
+  padding: 1.75rem;
+  border: 1px solid #e1e5f2;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 12px 32px rgb(34 45 90 / 8%);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  color: #252b49;
+  font-size: 1.35rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #353b59;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #d8dced;
+  border-radius: 0.6rem;
+  outline: none;
+  background: #fbfcff;
+  color: #20243a;
+  font: inherit;
+  resize: vertical;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+textarea:focus {
+  border-color: #6875db;
+  box-shadow: 0 0 0 3px rgb(104 117 219 / 16%);
+}
+
+button {
+  padding: 0.65rem 0.9rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background: #5968d7;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #4655c4;
+}
+
+ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 0.75rem;
+  border: 1px solid #e8eaf3;
+  border-radius: 0.7rem;
+  background: #fafbff;
+  color: #353b59;
+  overflow-wrap: anywhere;
+}
+
+.lista-vacia {
+  border-style: dashed;
+  color: #777e98;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: 1.1rem;
+  }
+}

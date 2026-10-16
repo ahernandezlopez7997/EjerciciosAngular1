@@ -1,8 +1,11 @@
 
 
 <main>
-  <app-saludo nombre="Alberto"/>
+  <app-saludo/>
+  <app-semaforo/>
   <app-lista-de-tareas/>
+  <app-temporizador/>
+  <app-comentarios (comentarioEnviado)="recibirComentario($event)" />
 </main>
 
 <router-outlet />

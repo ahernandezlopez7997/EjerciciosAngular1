@@ -1,0 +1,22 @@
+<section>
+  <h2>Comentarios</h2>
+
+  <label for="nuevo-comentario">Escribe un comentario:</label>
+  <textarea
+    #nuevoComentario
+    id="nuevo-comentario"
+    rows="3"
+    placeholder="Escribe aquí..."
+  ></textarea>
+  <button type="button" (click)="enviarComentario(nuevoComentario.value); nuevoComentario.value = ''">
+    Enviar comentario
+  </button>
+
+  <ul>
+    @for (comentario of comentarios; track $index) {
+      <li>{{ comentario }}</li>
+    } @empty {
+      <li class="lista-vacia">Todavía no hay comentarios.</li>
+    }
+  </ul>
+</section>
